@@ -98,7 +98,7 @@ class OrderController extends Controller
                 'total' => $cartItem->quantity * ($cartItem->book->price ?? 0),
             ]);
         }
-
+//تعديل
         // تفريغ السلة
         Cart::where('cookie_id', $cookieId)->delete();
 
