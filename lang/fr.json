@@ -1,0 +1,13 @@
+{
+    "home": "Page d'accueil",
+    "about": "À propos de nous",
+    "login": "Se connecter maintenant",
+    "register": "Créer un compte",
+    "logout": "Se déconnecter",
+    "dashboard": "Tableau de bord",
+    "profile": "Profil",
+    "name": "Nom",
+    "email": "Adresse e-mail",
+    "password": "Mot de passe",
+    "password_confirmation": "Confirmation du mot de passe"
+}

@@ -1,0 +1,113 @@
+{
+    "Dashboard": "Dashboard",
+"categories": "Categories",
+"Products": "Products",
+"Stores": "Stores",
+"Roles": "Roles",
+"Admins": "Admins",
+"Users": "Users",
+"New": "New",
+"Home": "Home",
+"Settings": "Settings",
+"Profile": "Profile",
+"Logout": "Logout",
+ "Delete Con":"are you sure?",
+  "Totally Books": "Number of Books",
+"Create": "Create",
+"Edit": "Edit",
+"Delete": "Delete",
+"Show": "Show",
+"Save": "Save",
+"Cancel": "Cancel",
+"Submit": "Submit",
+"Back": "Back",
+"Actions": "Actions",
+
+"Name": "Name",
+"Description": "Description",
+"Status": "Status",
+"Active": "Active",
+"Inactive": "Inactive",
+"Image": "Image",
+"Price": "Price",
+"Quantity": "Quantity",
+
+"Create Category": "Create Category",
+"Edit Category": "Edit Category",
+"Category Details": "Category Details",
+"Categories List": "Categories List",
+"Parent Category": "Parent Category",
+"Choose parent": "Choose Parent",
+
+"Create Product": "Create Product",
+"Edit Product": "Edit Product",
+"Product Details": "Product Details",
+"Products List": "Products List",
+
+"Create Store": "Create Store",
+"Edit Store": "Edit Store",
+"Store Details": "Store Details",
+"Stores List": "Stores List",
+
+"Create User": "Create User",
+"Edit User": "Edit User",
+"User Details": "User Details",
+"Users List": "Users List",
+
+"Create Admin": "Create Admin",
+"Edit Admin": "Edit Admin",
+"Admin Details": "Admin Details",
+"Admins List": "Admins List",
+
+"Create Role": "Create Role",
+"Edit Role": "Edit Role",
+"Role Details": "Role Details",
+"Roles List": "Roles List",
+"Permissions": "Permissions",
+
+"Search": "Search",
+"Filter": "Filter",
+"Export": "Export",
+"Import": "Import",
+
+"Email": "Email",
+"Password": "Password",
+"Password Confirmation": "Password Confirmation",
+"Phone": "Phone Number",
+"Address": "Address",
+"City": "City",
+"Country": "Country",
+
+"Created At": "Created At",
+"Updated At": "Updated At",
+
+"Are you sure?": "Are you sure?",
+"Delete Confirmation": "Delete Confirmation",
+"This action cannot be undone": "This action cannot be undone",
+
+"Success": "Success",
+"Error": "Error",
+"Warning": "Warning",
+"Info": "Info",
+
+"Category created successfully": "Category created successfully",
+"Category updated successfully": "Category updated successfully",
+"Category deleted successfully": "Category deleted successfully",
+
+"Product created successfully": "Product created successfully",
+"Product updated successfully": "Product updated successfully",
+"Product deleted successfully": "Product deleted successfully",
+
+"No records found": "No records found",
+"Total": "Total",
+"Showing": "Showing",
+"of": "of",
+"results": "results",
+
+"English": "English",
+"Arabic": "Arabic",
+"Language": "Language"
+
+
+
+}

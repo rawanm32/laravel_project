@@ -1,0 +1,9 @@
+<?php 
+return
+[
+    'home' => 'Home',
+    'about' => 'About',
+   
+    'login' => 'Login',
+    'register' => 'Register'
+];
