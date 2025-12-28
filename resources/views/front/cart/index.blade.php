@@ -14,14 +14,12 @@
                 <div class="text-center">
                     <h1 class="text-5xl md:text-6xl font-black text-white mb-6 leading-tight drop-shadow-2xl">
                         <i class="fas fa-shopping-bag ml-3"></i>
-                        سلة التسوق
+                        {{ _('Cart Items') }}
                     </h1>
-                    <p class="text-xl text-purple-100 mb-8 max-w-2xl mx-auto">
-                        راجع مشترياتك وأكمل عملية الشراء بأمان وسهولة
-                    </p>
+                 
                     <div class="flex flex-wrap justify-center gap-4">
                         <div class="bg-white/20 backdrop-blur-sm px-6 py-3 rounded-full">
-                            <span class="text-white font-bold">{{ $cartItems->count() ?? 0 }} منتجات</span>
+                            <span class="text-white font-bold">{{ $cartItems->count() ?? 0 }} {{ __('Books') }}</span>
                         </div>
                         <div class="bg-white/20 backdrop-blur-sm px-6 py-3 rounded-full">
                             <span class="text-white font-bold">${{ number_format($total, 2) }}</span>
@@ -44,26 +42,24 @@
                         </div>
                         <div class="absolute -bottom-3 left-1/2 transform -translate-x-1/2">
                             <div class="bg-white px-8 py-3 rounded-full shadow-xl border border-purple-200">
-                                <span class="text-purple-700 font-bold">السلة فارغة</span>
+                                <span class="text-purple-700 font-bold"> {{ __('No Items') }}</span>
                             </div>
                         </div>
                     </div>
                     
-                    <h2 class="text-4xl font-black text-gray-800 mb-6">🛒 سلة التسوق فارغة</h2>
-                    <p class="text-gray-600 text-lg mb-10 max-w-md mx-auto">
-                        لم تقم بإضافة أي منتجات للسلة بعد. ابدأ بالتسوق لاكتشاف عالم الكتب الرائع!
-                    </p>
+                 
+                   
                     
                     <div class="flex flex-col sm:flex-row gap-6 justify-center">
                         <a href="{{ route('home') }}" 
                            class="group bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white px-10 py-4 rounded-xl font-bold text-lg transition-all duration-300 hover:shadow-2xl transform hover:scale-105 inline-flex items-center justify-center">
                             <i class="fas fa-book-open ml-3 group-hover:rotate-12 transition-transform"></i>
-                            تصفح الكتب
+                         {{__('Show')}} {{ __('Books') }}
                         </a>
                         <a href="{{ route('cart.index') }}" 
                            class="group bg-white hover:bg-gray-50 text-purple-700 border-2 border-purple-300 hover:border-purple-400 px-10 py-4 rounded-xl font-bold text-lg transition-all duration-300 hover:shadow-xl transform hover:scale-105 inline-flex items-center justify-center">
                             <i class="fas fa-star ml-3 group-hover:animate-pulse"></i>
-                            الكتب الأكثر مبيعاً
+                        
                         </a>
                     </div>
                 </div>
@@ -80,12 +76,12 @@
                                         <i class="fas fa-shopping-cart text-white text-xl"></i>
                                     </div>
                                     <div>
-                                        <h2 class="text-2xl font-black text-white">منتجات السلة</h2>
-                                        <p class="text-purple-100 text-sm">يمكنك تعديل الكميات أو إزالة المنتجات</p>
+                                        <h2 class="text-2xl font-black text-white"> {{ __('Cart Items') }}</h2>
+                             
                                     </div>
                                 </div>
                                 <div class="flex items-center gap-4">
-                                    <span class="text-white font-bold">عدد المنتجات: {{ $cartItems->count() }}</span>
+                                    <span class="text-white font-bold">{{ __('Totally Books') }} : {{ $cartItems->count() }}</span>
                                     <form action="{{ route('cart.clear') }}" method="POST">
                                         @csrf
                                         @method('DELETE')
@@ -93,7 +89,7 @@
                                                 onclick="return confirm('هل تريد تفريغ السلة بالكامل؟')"
                                                 class="bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white px-5 py-2 rounded-lg font-semibold text-sm transition duration-300 hover:shadow-lg flex items-center">
                                             <i class="fas fa-trash ml-2"></i>
-                                            تفريغ السلة
+                                             {{ __('Delete All') }}  
                                         </button>
                                     </form>
                                 </div>
@@ -108,19 +104,19 @@
                                     <thead>
                                         <tr class="bg-gradient-to-r from-purple-50 to-purple-100">
                                             <th class="py-5 px-6 text-right text-purple-800 font-bold text-lg border-b border-purple-200">
-                                                <i class="fas fa-book ml-2"></i> المنتج
+                                                <i class="fas fa-book ml-2"></i> {{ __('The Book') }}
                                             </th>
                                             <th class="py-5 px-6 text-center text-purple-800 font-bold text-lg border-b border-purple-200">
-                                                <i class="fas fa-tag ml-2"></i> السعر
+                                                <i class="fas fa-tag ml-2"></i> {{ __('Price') }}
                                             </th>
                                             <th class="py-5 px-6 text-center text-purple-800 font-bold text-lg border-b border-purple-200">
-                                                <i class="fas fa-hashtag ml-2"></i> الكمية
+                                                <i class="fas fa-hashtag ml-2"></i> {{ __('Quantity') }}
                                             </th>
                                             <th class="py-5 px-6 text-center text-purple-800 font-bold text-lg border-b border-purple-200">
-                                                <i class="fas fa-calculator ml-2"></i> الإجمالي
+                                                <i class="fas fa-calculator ml-2"></i> {{ __('Total') }}
                                             </th>
                                             <th class="py-5 px-6 text-center text-purple-800 font-bold text-lg border-b border-purple-200">
-                                                <i class="fas fa-cog ml-2"></i> الإجراءات
+                                                <i class="fas fa-cog ml-2"></i> {{ __('Actions') }}
                                             </th>
                                         </tr>
                                     </thead>
@@ -255,7 +251,7 @@
                                     
                                     <div class="grid grid-cols-2 gap-4 mb-4">
                                         <div>
-                                            <label class="block text-gray-600 text-sm mb-2">الكمية:</label>
+                                            <label class="block text-gray-600 text-sm mb-2">{{ __('Quantity') }}:</label>
                                             <form action="{{ route('cart.update', $item->id) }}" method="POST" 
                                                   class="flex items-center bg-gradient-to-r from-purple-50 to-white border-2 border-purple-200 rounded-xl overflow-hidden">
                                                 @csrf
@@ -279,7 +275,7 @@
                                             </form>
                                         </div>
                                         <div>
-                                            <label class="block text-gray-600 text-sm mb-2">الإجمالي:</label>
+                                            <label class="block text-gray-600 text-sm mb-2">{{ __('Total') }}:</label>
                                             <div class="text-2xl font-bold text-emerald-600">
                                                 ${{ number_format($item->quantity * ($item->book->price ?? 0), 2) }}
                                             </div>
@@ -289,7 +285,7 @@
                                     <div class="flex gap-3">
                                         <a href="{{ $item->book ? route('books.show', $item->book) : '#' }}" 
                                            class="flex-1 bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700 text-white px-4 py-3 rounded-xl font-semibold text-center transition duration-300">
-                                            <i class="fas fa-eye ml-2"></i> عرض
+                                            <i class="fas fa-eye ml-2"></i> {{ __('Show') }}
                                         </a>
                                         <form action="{{ route('cart.destroy', $item->id) }}" method="POST" 
                                               class="flex-1"
@@ -298,7 +294,7 @@
                                             @method('DELETE')
                                             <button type="submit" 
                                                     class="w-full bg-gradient-to-r from-red-500 to-pink-600 hover:from-red-600 hover:to-pink-700 text-white px-4 py-3 rounded-xl font-semibold transition duration-300">
-                                                <i class="fas fa-trash ml-2"></i> حذف
+                                                <i class="fas fa-trash ml-2"></i> {{ __('Delete') }}
                                             </button>
                                         </form>
                                     </div>
@@ -312,7 +308,7 @@
                             <a href="{{ route('home') }}" 
                                class="group inline-flex items-center bg-white hover:bg-gray-50 text-purple-700 border-2 border-purple-300 hover:border-purple-400 px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 hover:shadow-xl transform hover:scale-105">
                                 <i class="fas fa-arrow-left ml-3 group-hover:-translate-x-1 transition-transform"></i>
-                                متابعة التسوق
+                                {{ __('Continue Shopping') }}
                                 <i class="fas fa-book-open mr-3 opacity-70"></i>
                             </a>
                         </div>
@@ -328,8 +324,8 @@
                                         <i class="fas fa-receipt text-white text-xl"></i>
                                     </div>
                                     <div>
-                                        <h2 class="text-2xl font-black text-white">ملخص الطلب</h2>
-                                        <p class="text-purple-100 text-sm">مراجعة نهائية قبل الدفع</p>
+                                        <h2 class="text-2xl font-black text-white">{{ __('Order Summary') }}</h2>
+                                       
                                     </div>
                                 </div>
                             </div>
@@ -369,26 +365,26 @@
                                 <!-- Totals -->
                                 <div class="space-y-4 mb-6">
                                     <div class="flex justify-between items-center">
-                                        <span class="text-gray-700 font-semibold">المجموع الفرعي:</span>
+                                        <span class="text-gray-700 font-semibold">{{ __('Subtotal') }}:</span>
                                         <span class="text-2xl font-bold text-purple-700">${{ number_format($total, 2) }}</span>
                                     </div>
                                     
                                     <div class="flex justify-between items-center">
-                                        <span class="text-gray-700 font-semibold">الشحن:</span>
-                                        <span class="text-xl font-bold text-emerald-600">مجاني</span>
+                                        <span class="text-gray-700 font-semibold">{{ __('Shipping') }}:</span>
+                                        <span class="text-xl font-bold text-emerald-600">{{ __('Free') }}</span>
                                     </div>
                                     
                                     <div class="flex justify-between items-center">
-                                        <span class="text-gray-700 font-semibold">الضريبة:</span>
+                                        <span class="text-gray-700 font-semibold">{{ __('Tax') }}:</span>
                                         <span class="text-xl font-bold text-gray-600">$0.00</span>
                                     </div>
                                     
                                     <div class="border-t border-purple-200 pt-4">
                                         <div class="flex justify-between items-center">
-                                            <span class="text-xl font-bold text-gray-800">الإجمالي النهائي:</span>
+                                            <span class="text-xl font-bold text-gray-800">{{ __('Total') }}:</span>
                                             <span class="text-3xl font-black text-purple-800">${{ number_format($total, 2) }}</span>
                                         </div>
-                                        <p class="text-gray-600 text-sm mt-2 text-left">شاملاً جميع الضرائب والرسوم</p>
+                                        
                                     </div>
                                 </div>
 
@@ -396,7 +392,7 @@
                                 <a href="{{ route('cart.checkout') }}" 
                                    class="group w-full bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white px-8 py-5 rounded-xl font-black text-xl shadow-xl hover:shadow-2xl transform hover:scale-[1.02] transition-all duration-300 flex items-center justify-center">
                                     <i class="fas fa-credit-card text-2xl ml-3 group-hover:animate-pulse"></i>
-                                    إتمام عملية الشراء
+                                {{__('Done')}}
                                     <i class="fas fa-arrow-left mr-auto text-white/70"></i>
                                 </a>
 
@@ -407,15 +403,15 @@
                                             <i class="fas fa-shield-alt text-emerald-600"></i>
                                         </div>
                                         <div>
-                                            <h4 class="font-bold text-emerald-800">دفع آمن 100%</h4>
-                                            <p class="text-emerald-700 text-xs">بياناتك محمية بتقنيات التشفير المتقدمة</p>
+                                          
+                                            <p class="text-emerald-700 text-xs"> {{ __('Your personal information is protected with the highest security standards') }} </p>
                                         </div>
                                     </div>
                                 </div>
 
                                 <!-- Payment Methods -->
                                 <div class="mt-6">
-                                    <h4 class="text-gray-700 font-bold mb-3">طرق الدفع المقبولة:</h4>
+                                    <h4 class="text-gray-700 font-bold mb-3">{{ __('Payment Methods') }}:</h4>
                                     <div class="flex justify-center gap-4">
                                         <div class="w-12 h-8 bg-gray-100 rounded flex items-center justify-center">
                                             <i class="fab fa-cc-visa text-blue-600 text-xl"></i>

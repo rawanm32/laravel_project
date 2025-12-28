@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <title>@yield('title', 'مجرَة')</title>
+    <title>@yield('title', __('Paradise'))</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -82,12 +82,21 @@
                 <a href="{{ route('home') }}" class="text-2xl font-bold text-purple-600">
                 {{__('Paradise')}}
                 </a>
-
+                 <div class="p-3" style="max-width: 200px;">
+    <select class="form-select form-select-sm" onchange="window.location.href=this.value">
+        @foreach (LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+            <option value="{{ LaravelLocalization::getLocalizedURL($localeCode) }}" 
+                    @selected($localeCode == App::currentLocale())>
+                {{ $properties['native'] }}
+            </option>
+        @endforeach
+    </select>
+</div>
                 <!-- Cart Icon - SIMPLIFIED -->
                 <div class="relative">
                     <a href="{{ route('cart.index') }}" class="cart-icon">
                         <i class="fas fa-shopping-cart"></i>
-                        <span class="cart-badge">0</span>
+                    
                     </a>
                 </div>
 

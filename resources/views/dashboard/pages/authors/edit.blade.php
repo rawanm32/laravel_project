@@ -15,13 +15,13 @@
                                 <i class="material-icons">edit</i>
                             </div>
                             <div class="header-info">
-                                <h4 class="card-title">تعديل كتاب</h4>
-                                <p class="card-category">أدخل بيانات الكتاب الجديدة</p>
+                                <h4 class="card-title">{{ __('Edit') }}</h4>
+                                <p class="card-category">{{ __('Enter the new data') }}</p>
                             </div>
                         </div>
                         <div class="edit-badge">
                             <i class="material-icons">auto_stories</i>
-                            <span>تحرير</span>
+                            <span>{{ __('Edit') }}</span>   
                         </div>
                     </div>
                     
@@ -54,13 +54,13 @@
                             <div class="form-footer">
                                 <button type="submit" class="btn-update-modern">
                                     <i class="material-icons">check_circle</i>
-                                    <span>حفظ التعديلات</span>
+                                    <span>{{ __('Save') }}</span>
                                     <div class="btn-ripple"></div>
                                 </button>
                                 
                                 <a href="{{ route('dashboard.authors.index') }}" class="btn-back-modern">
                                     <i class="material-icons">arrow_back</i>
-                                    <span>إلغاء</span>
+                                    <span>{{ __('Cancel') }}</span>
                                 </a>
                             </div>
                         </form>
