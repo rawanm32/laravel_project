@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Dashboard;
 use App\Http\Controllers\Controller;
 use App\Models\Role;
 use App\Models\RoleAbility;
+use Illuminate\Support\Facades\Gate;
 use Illuminate\Http\Request;
 
 use function PHPUnit\Framework\returnValue;
@@ -21,6 +22,7 @@ class RolesController extends Controller
     public function index()
     {
         //
+        Gate::authorize('roles.view');
         $roles = Role::paginate(5);
         return view('dashboard.pages.roles.index',compact('roles'));
     }
@@ -31,6 +33,7 @@ class RolesController extends Controller
     public function create()
     {
         //
+        Gate::authorize('roles.create');
         return view('dashboard.pages.roles.create',
         [
             'role' => new Role(),
@@ -43,6 +46,7 @@ class RolesController extends Controller
     public function store(Request $request)
     {
         //
+
         $request->validate([
             'name' => 'required',
             'abilities' => 'required|array',
@@ -67,6 +71,7 @@ class RolesController extends Controller
     public function edit(Role $role)
     {
         //
+        Gate::authorize('roles.update');
         $role_abilities = $role->abilities()->pluck('type','ability')->toArray();
         // اول باراميتر بكون الفاليو والثاني بكون ال كي
         // type value
@@ -81,6 +86,7 @@ class RolesController extends Controller
     public function update(Request $request, Role $role )
     {
         //
+
         
         $role->updateWithAbilities($request);
         return redirect()
@@ -95,6 +101,7 @@ class RolesController extends Controller
     public function destroy(string $id)
     {
         //
+        Gate::authorize('roles.delete');
         Role::destroy($id);
         return redirect()->route('roles.index')
         ->with('danger','Role deleted successfully');

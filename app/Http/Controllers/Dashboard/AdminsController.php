@@ -14,6 +14,8 @@ class AdminsController extends Controller
     //
     public function index()
     {
+
+        
            Gate::authorize('admins.view');
         return view('dashboard.pages.admins.index',[
            'admins' => Admin::with('roles')->get(),

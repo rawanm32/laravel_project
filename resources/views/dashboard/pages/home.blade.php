@@ -52,7 +52,7 @@
             <p class="stat-label"> {{__('Total')}} {{__('Users')}}</p>
             <h3 class="stat-value" data-value="{{ $stats['total_user'] }}">0</h3>
             <div class="stat-trend">
-              <i class="material-icons">trending_up</i>
+         
        
             </div>
           </div>
@@ -73,8 +73,7 @@
             <p class="stat-label"> {{__('Total')}} {{__('categories')}}</p>
             <h3 class="stat-value" data-value="{{ $stats['total_categories'] }}">0</h3>
             <div class="stat-trend">
-              <i class="material-icons">trending_up</i>
-              <span> {{__('Active')}} {{__('categories')}}</span>
+          
             </div>
           </div>
           <div class="card-shine"></div>
@@ -94,7 +93,7 @@
             <p class="stat-label">{{__('Total')}} {{__('Books')}}</p>
             <h3 class="stat-value" data-value="{{ $stats['total_books'] }}">0</h3>
             <div class="stat-trend">
-              <i class="material-icons">trending_up</i>
+           
              
             </div>
           </div>
@@ -115,8 +114,7 @@
             <p class="stat-label">{{__('Active')}} {{__('Authors')}}</p>
             <h3 class="stat-value" data-value="{{ $stats['total_authors'] }}">0</h3>
             <div class="stat-trend">
-              <i class="material-icons">trending_up</i>
-              <span>مؤلفين مميزين</span>
+            
             </div>
           </div>
           <div class="card-shine"></div>

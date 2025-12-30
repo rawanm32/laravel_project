@@ -5,8 +5,8 @@
       <div class="navbar-brand-container">
         <i class="material-icons brand-icon">local_library</i>
         <a class="navbar-brand" href="javascript:;">
-          <span class="brand-text">{{ __('مكتبتي الرقمية') }}</span>
-          <small class="brand-subtitle">{{ __('نظام إدارة متكامل') }}</small>
+          <span class="brand-text">{{ __('Digital Library') }}</span>
+          <small class="brand-subtitle">{{ __('Comprehensive Library Management System') }}</small>
         </a>
       </div>
     </div>
@@ -35,7 +35,7 @@
       <!-- Search Bar -->
       <form class="navbar-form search-form">
         <div class="input-group search-group">
-          <input type="text" class="form-control search-input" placeholder="{{ __('ابحث عن كتاب، مؤلف...') }}">
+          <input type="text" class="form-control search-input" placeholder="{{ __('Search') }}">
           <button type="submit" class="btn search-btn">
             <i class="material-icons">search</i>
           </button>
@@ -118,10 +118,7 @@
         <!-- User Profile -->
         <li class="nav-item dropdown profile-dropdown">
           <a class="nav-link" href="javascript:;" data-toggle="dropdown">
-            <div class="profile-avatar">
-              <img src="{{ Auth::user()->avatar ?? asset('assets/img/default-avatar.png') }}" alt="Profile">
-              <span class="status-indicator online"></span>
-            </div>
+         
             <span class="profile-name d-none d-lg-inline">{{ Auth::user()->name ?? 'المستخدم' }}</span>
             <p class="d-lg-none d-md-block">{{ __('الحساب') }}</p>
           </a>

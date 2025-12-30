@@ -1,60 +1,21 @@
 <ul class="nav">
   <!-- Dashboard -->
-  <li class="nav-item">
-    <a class="nav-link" href="{{ route('dashboard.index') }}">
-      <i class="material-icons">home</i>
-      <p>{{ __('الرئيسية') }}</p>
-    </a>
-  </li>
+  
 
   <!-- Books Section -->
-  <li class="nav-item">
-    <a class="nav-link" href="{{ route('dashboard.books.index') }}">
-      <i class="material-icons">menu_book</i>
-      <p>{{ __('الكتب') }}</p>
-    </a>
-  </li>
-
+ 
   <!-- Categories -->
-  <li class="nav-item">
-    <a class="nav-link" href="{{ route('dashboard.categories.index') }}">
-      <i class="material-icons">category</i>
-      <p>{{ __('التصنيفات') }}</p>
-    </a>
-  </li>
-
+ 
   <!-- Authors -->
-  <li class="nav-item">
-    <a class="nav-link" href="{{ route('dashboard.authors.index') }}">
-      <i class="material-icons">person_outline</i>
-      <p>{{ __('المؤلفين') }}</p>
-    </a>
-  </li>
+
 
   <!-- Users -->
-  <li class="nav-item">
-    <a class="nav-link" href="{{ route('dashboard.users.index') }}">
-      <i class="material-icons">people</i>
-      <p>{{ __('المستخدمين') }}</p>
-    </a>
-  </li>
-
+  
   <!-- Borrowing -->
-  <li class="nav-item">
-    <a class="nav-link" href="{{ route('admins.index') }}">
-      <i class="material-icons">swap_horiz</i>
-      <p>{{ __('Admins') }}</p>
-    </a>
-  </li>
+ 
 
   <!-- Reports -->
-  <li class="nav-item">
-    <a class="nav-link" href="{{ route('roles.index') }}">
-      <i class="material-icons">swap_horiz</i>
-      <p>{{ __('Admins') }}</p>
-    </a>
-  </li>
-
+  <x-nav />
 
 
 
@@ -72,7 +33,7 @@
     </form>
   </li>
 </ul>
-
+ 
 <style>
 /* Enhanced Sidebar Styling */
 .sidebar {

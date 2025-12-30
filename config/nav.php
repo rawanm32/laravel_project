@@ -1,67 +1,50 @@
 <?php
 return [
     [
-        'icon_name' => 'person', 
-            'title' => 'profile',
-            'route' => 'dashboard.profile.edit',
-            'active' => 'dashboard.profile.*',
-          
-         
-
+        'icon' => 'person', 
+        'title' => 'profile',
+        'route' => 'dashboard.profile.edit',
+        'active' => 'dashboard.profile.*',
     ],
     [
-
-        'icon_name' => 'dashboard',
-        'icon'=>'nav-icon fas fa-th',
-        'title'=>'dashboard',
-        'route'=>'dashboard.index',
-        'active'=>'*dashboard',
-         
-       
-        
-        
+        'icon' => 'dashboard', // صححت إلى dashboard بدلاً من home
+        'title' => 'dashboard',
+        'route' => 'dashboard.index',
+        'active' => 'dashboard.*', // صححت النمط
     ],
     [
-        'icon'=>'far fa-circle nav-icon',
-        'title'=>'categories',
-        'route'=>'dashboard.categories.index',
-        'active'=>'*.categories.*',
-        'ability'=>'categories.view'
-      
-
- 
+        'icon' => 'category',
+        'title' => 'categories',
+        'route' => 'dashboard.categories.index',
+        'active' => 'dashboard.categories.*',
+        'ability' => 'categories.view'
     ],
     [
-        'icon'=>'nav-icon fas fa-book',
-        'title'=>'Books',
-        'route'=>'dashboard.books.index',
-        'active'=>'*.books.*',
-        'ability'=>'books.view'       
-   
+        'icon' => 'menu_book',
+        'title' => 'Books',
+        'route' => 'dashboard.books.index',
+        'active' => 'dashboard.books.*',
+        'ability' => 'books.view'
     ],
     [
-        'icon'=>'fas fa-store',
-        'title'=>'Authors',
-        'route'=>'dashboard.authors.index',
-        'active'=>'*.authors.*',
-        'ability'=>'authors.view'
-        
+        'icon' => 'person_outline',
+        'title' => 'Authors',
+        'route' => 'dashboard.authors.index',
+        'active' => 'dashboard.authors.*',
+        'ability' => 'authors.view'
     ],
     [
-        'icon'=>'fas fa-store',
-        'title'=>'Roles',
-        'route'=>'roles.index',
-        'active'=>'*.roles.*',
-        'ability'=>'roles.view',
-       
+        'icon' => 'security', // صححت أيقونة الأدوار
+        'title' => 'Roles',
+        'route' => 'roles.index',
+        'active' => 'roles.*',
+        'ability' => 'roles.view'
     ],
     [
-     'icon' =>'far fa-shield nav-icon',
+        'icon' => 'people',
         'title' => 'Admins',
         'route' => 'admins.index',
-        'active' => '*.admins.*', 
-        'ability'=>'admins.view'
-        
-       
+        'active' => 'admins.*',
+        'ability' => 'admins.view'
     ],
 ];

@@ -25,7 +25,7 @@
     <div class="sidebar" data-color="purple" data-background-color="white" data-image="{{asset('assets/img/sidebar-         1.jpg') }}">
      
       <div class="logo"><a href="http://www.creative-tim.com" class="simple-text logo-normal">
-          Creative Tim
+        {{__('Paradise')}}
         </a></div>
       <div class="sidebar-wrapper">
       @include('layouts.sections.sidebar')

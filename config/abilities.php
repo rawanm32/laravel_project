@@ -21,5 +21,8 @@ return [
     'admins.update'=>'update admins',
     'admins.delete'=>'delete admins',
 
-
+    'roles.view'=>'view roles',
+    'roles.create'=>'create roles',
+    'roles.update'=>'update roles',
+    'roles.delete'=>'delete roles',
 ];

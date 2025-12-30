@@ -92,6 +92,7 @@
         @endforeach
     </select>
 </div>
+
                 <!-- Cart Icon - SIMPLIFIED -->
                 <div class="relative">
                     <a href="{{ route('cart.index') }}" class="cart-icon">
@@ -122,6 +123,11 @@
                                    {{__('logout')}}
                                 </button>
                             </form>
+                        <a href="{{route('front.2fa')}}">
+                                <button type="submit" class="block w-full text-right px-4 py-2 text-red-600 hover:bg-red-50">
+                                   {{__('2fa')}}
+                                </button>
+                        </a>
                         </div>
                     </div>
                     @else
@@ -132,6 +138,7 @@
                       {{__('register')}}
                     </a>
                     @endauth
+                    
                 </nav>
 
                 <!-- Mobile Menu Button -->

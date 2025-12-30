@@ -15,7 +15,7 @@
                                 <i class="material-icons">add_circle</i>
                             </div>
                             <div class="header-info">
-                                <h4 class="card-title">{{__('Add')}} {{__('Book')}}</h4>
+                                <h4 class="card-title">{{__('Add')}}  {{__('Admins')}}</h4>
                        
                             </div>
                         </div>
