@@ -18,7 +18,7 @@
                 <div class="search-fields">
                     <div class="field-wrapper">
                         <div class="field-icon">
-                            <i class="material-icons">{{__('Search')}}</i>
+                            <i class="material-icons">search</i>
                         </div>
                         <x-form.input 
                             type="text" 
@@ -43,7 +43,7 @@
 
                     <div class="buttons-wrapper">
                         <button type="submit" class="btn-search-modern">
-                            <i class="material-icons">{{__('Search')}}</i> 
+                            <i class="material-icons">search</i> 
                             <span>{{__('Search')}}</span>
                         </button>
                         <a href="{{ route('dashboard.books.index') }}" class="btn-cancel-modern">

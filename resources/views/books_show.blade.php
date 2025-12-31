@@ -176,7 +176,7 @@
                     <div class="mt-6">
                         <div class="inline-flex items-center bg-gradient-to-r from-red-500 to-pink-600 text-white px-6 py-3 rounded-full font-bold shadow-lg">
                             <i class="fas fa-percentage ml-2"></i>
-                            وفر {{ number_format((($book->compare_price - $book->price) / $book->compare_price) * 100, 0) }}%
+                            {{ __('Discount') }} {{ number_format((($book->compare_price - $book->price) / $book->compare_price) * 100, 0) }}%
                         </div>
                     </div>
                     @endif

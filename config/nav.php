@@ -10,7 +10,7 @@ return [
         'icon' => 'dashboard', // صححت إلى dashboard بدلاً من home
         'title' => 'dashboard',
         'route' => 'dashboard.index',
-        'active' => 'dashboard.*', // صححت النمط
+        'active' => '*.dashboard', // صححت النمط
     ],
     [
         'icon' => 'category',

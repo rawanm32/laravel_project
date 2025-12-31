@@ -49,37 +49,23 @@ class HomeController extends Controller
      * @param  \App\Models\Book  $book
      * @return \Illuminate\View\View|\Illuminate\Http\Response
      */
-    public function show(Book $book) 
-    {
-        // 1. التحقق من حالة الكتاب.
-        // بما أنكِ اختبرتِ الـ 403 بنجاح، نعود لاستخدام الـ 404 لإخفاء الكتاب
-        if ($book->status !== 'available') {
-            abort(404);
-        }
-        
-        $book->load('category', 'author');
+  public function show(Book $book) 
+{
+    if ($book->status !== 'available') {
+        abort(404);
+    }
+    
+    $book->load('category', 'author');
 
-        // جلب الكتب ذات الصلة
-        $relatedBooks = Book::with('category', 'author')
-            ->where('status', 'active')
-            ->where('id', '!=', $book->id)
-            ->get();
+    // أولوية: نفس التصنيف
+    $relatedBooks = Book::with('category', 'author')
+        ->where('status', 'available')  // تصحيح
+        ->where('category_id', $book->category_id)  // إضافة هذا الشرط
+        ->where('id', '!=', $book->id)
+        ->inRandomOrder()
+        ->limit(4)  // تحديد العدد
+        ->get();
 
-       
-        if ($relatedBooks->count() < 4) {
-            $limit = 4 - $relatedBooks->count();
-
-            $additionalBooks = Book::with('category', 'author')
-                ->where('status', 'available')
-                ->where('id', '!=', $book->id)
-                ->whereNotIn('id', $relatedBooks->pluck('id'))
-                ->inRandomOrder()
-                ->limit($limit)
-                ->get();
-            
-            $relatedBooks = $relatedBooks->merge($additionalBooks);
-        }
-
-        return view("books_show", compact('book','relatedBooks'));
-    } 
+    return view("books_show", compact('book', 'relatedBooks'));
+}
 }
