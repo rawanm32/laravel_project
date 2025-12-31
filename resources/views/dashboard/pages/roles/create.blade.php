@@ -17,8 +17,8 @@
                                 <i class="material-icons">add_circle</i>
                             </div>
                             <div class="header-info">
-                                <h4 class="card-title">{{__('Add')}}{{__('Roles')}}</h4>
-                                <p class="card-category">{{__('Enter the new date')}}</p>
+                                <h4 class="card-title">{{__('Add')}} {{__('Roles')}}</h4>
+                                <p class="card-category">{{__('Enter the new data')}}</p>
                             </div>
                         </div>
                         <div class="header-decoration">

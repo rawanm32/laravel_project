@@ -94,31 +94,31 @@
                                         <th>
                                             <div class="th-inner">
                                                 <i class="material-icons">image</i>
-                                                <span>{{__('image')}}</span>
+                                                <span>{{__('Image')}}</span>
                                             </div>
                                         </th> 
                                         <th>
                                             <div class="th-inner">
                                                 <i class="material-icons">title</i>
-                                                <span>{{__('Title')}}</span>
+                                                <span>{{__('title')}}</span>
                                             </div>
                                         </th>
                                         <th>
                                             <div class="th-inner">
                                                 <i class="material-icons">person</i>
-                                                <span>{{__('Author')}}</span>
+                                                <span>{{__('Authors')}}</span>
                                             </div>
                                         </th>
                                         <th>
                                             <div class="th-inner">
                                                 <i class="material-icons">category</i>
-                                                <span>{{__('category')}}</span>
+                                                <span>{{__('Category')}}</span>
                                             </div>
                                         </th>
                                         <th>
                                             <div class="th-inner">
                                                 <i class="material-icons">monetization_on</i>
-                                                <span>{{__('price')}}</span>
+                                                <span>{{__('Price')}}</span>
                                             </div>
                                         </th>
                                         <th class="text-right">

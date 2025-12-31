@@ -106,19 +106,19 @@
                                                 <span>{{__('name')}}</span>
                                             </div>
                                         </th>
-                                       
-                                       <th>
-                                            <div class="th-inner">
-                                              
-                                                <span>{{__('Total_books')}}</span>
-                                            </div>
-                                        </th>
-                                        <th>
+                                         <th>
                                             <div class="th-inner">
                                             
                                                 <span>{{__('Status')}}</span>
                                             </div>
                                         </th>
+                                       <th>
+                                            <div class="th-inner">
+                                              
+                                                <span>{{__('Totally Books')}}</span>
+                                            </div>
+                                        </th>
+                                      
                                         <th class="text-right">
                                             <div class="th-inner">
                                                 <i class="material-icons">settings</i>
